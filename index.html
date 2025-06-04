@@ -165,9 +165,6 @@ var xrpl;(()=>{var e={54373:(e,t)=>{"use strict";function r(e){if(!Number.isSafe
       let h = '';
       
       if(this.mem_parent) {
-
-
-
         h += '<div class="mb-3 bg-light rounded p-2">';
         h += '<div class="font-weight-bold mb-1">Parent transaction</div>';
           h += '<div class="text-monospace small text-muted text-break lh-1 d-block mb-2">'+this.mem_parent.EmitParentTxnID+'</div>';
@@ -175,39 +172,6 @@ var xrpl;(()=>{var e={54373:(e,t)=>{"use strict";function r(e){if(!Number.isSafe
         h += '<div class="font-weight-bold mb-1">Parent emitted by</div>';
         h += XW_UTIL.HTML_HookName(this.mem_parent.EmitHookHash);
         h += '</div>';
-
-
-
-
-
-
-
-
-
-
-
-
-
-        /*h += '<div class="mb-2 font-weight-bold">Parent transaction</div>';
-        h += '<div class="mb-1 small bg-light rounded rounded-nobottom p-2">';
-          h += '<div>'+XW_UTIL.HTML_HookNameBlock(
-            this.mem_parent.EmitHookHash,
-            'font-weight-bold',
-            '<span class="text-monospace text-muted text-break lh-1 d-block" style="max-width:calc( 100% - 40px )">'+this.mem_parent.EmitHookHash+'</span>'
-          )+'</div>';
-        h += '</div>';
-        loadHooksHashes.push(this.mem_parent.EmitHookHash);
-
-
-        h += '<div class="mb-3 small bg-light rounded rounded-notop p-2">';
-        h += '<div class="font-weight-bold mb-1">Transaction</div>';
-
-          h += '<div class="text-monospace text-muted text-break lh-1 d-block">'+this.mem_parent.EmitParentTxnID+'</div>';
-     
-        h += '</div>';
-
-        */
-        //todo
       }
 
       //mem_invokeblob
@@ -1327,13 +1291,6 @@ var xrpl;(()=>{var e={54373:(e,t)=>{"use strict";function r(e){if(!Number.isSafe
     
     xamanWebViewFitFrame() {
       if(window.ReactNativeWebView) {
-        /*var container = document.getElementById('hooksexplainercontent_container');
-        var height = Math.max(
-          container.scrollHeight,
-          container.offsetHeight, 
-          container.clientHeight
-        );
-        if(height < 30) height = 30;*/
         let height = XW_UTIL.getContainerHeight();
         let resizeData = { layout: { height: height+2 } }
         window.ReactNativeWebView.postMessage(JSON.stringify(resizeData))
@@ -1353,7 +1310,6 @@ var xrpl;(()=>{var e={54373:(e,t)=>{"use strict";function r(e){if(!Number.isSafe
 
     getWindowHeight() {
       return window.innerHeight;
-      //let container = document.getElementById('hooksexplainercontent_container');
     },
 
     hookresultcodetotext(code) {
