@@ -1081,7 +1081,9 @@ var xrpl;(()=>{var e={54373:(e,t)=>{"use strict";function r(e){if(!Number.isSafe
           ||
           (this.new.CreateCode !== undefined && this.new.CreateCode !== "") //OR CreateCode is specified and not blank
         ) &&
-        this.new.Flags !== undefined && this._isFlagSet(this.new.Flags,1) //Flags is speficied and have hsfOVERRIDE
+        (
+          this.new.Flags !== undefined && (this._isFlagSet(this.new.Flags,1) || this.new.Flags == 0) //Flags is specified and have hsfOVERRIDE or is without override as 0
+        )
         // && !this._isFlagSet(this.new.Flags,2) //hsfNSDELETE namespace delete flag is forbidden
       ) {
         if (this.new.CreateCode !== undefined && this.new.CreateCode !== "")
