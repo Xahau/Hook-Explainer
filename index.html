@@ -1082,7 +1082,11 @@ var xrpl;(()=>{var e={54373:(e,t)=>{"use strict";function r(e){if(!Number.isSafe
           (this.new.CreateCode !== undefined && this.new.CreateCode !== "") //OR CreateCode is specified and not blank
         ) &&
         (
-          this.new.Flags !== undefined && (this._isFlagSet(this.new.Flags,1) || this.new.Flags == 0) //Flags is specified and have hsfOVERRIDE or is without override as 0
+          this.new.Flags !== undefined && ( //Flags is specified
+            this._isFlagSet(this.new.Flags,1) || //has override
+            this.new.Flags == 0 || //without override as 0
+            this.new.Flags == 4 //without override but collect calls only
+          ) 
         )
         // && !this._isFlagSet(this.new.Flags,2) //hsfNSDELETE namespace delete flag is forbidden
       ) {
