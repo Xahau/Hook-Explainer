@@ -595,18 +595,55 @@ var xrpl;(()=>{var e={54373:(e,t)=>{"use strict";function r(e){if(!Number.isSafe
         ['28','ttNFTOKEN_CANCEL_OFFER',2], //Private
         ['29','ttNFTOKEN_ACCEPT_OFFER',2], //Private
         ['30','ttCLAWBACK',0],
+        //AMM suite
+        ['31','ttAMM_CLAWBACK',0],
+        ['35','ttAMM_CREATE',0],
+        ['36','ttAMM_DEPOSIT',0],
+        ['37','ttAMM_WITHDRAW',0],
+        ['38','ttAMM_VOTE',0],
+        ['39','ttAMM_BID',0],
+        ['40','ttAMM_DELETE',0],
+        
         ['45','ttURITOKEN_MINT',0],
         ['46','ttURITOKEN_BURN',0],
         ['47','ttURITOKEN_BUY',0],
         ['48','ttURITOKEN_CREATE_SELL_OFFER',0],
         ['49','ttURITOKEN_CANCEL_SELL_OFFER',0],
+
+        //XChain suite
+        ['50','ttXCHAIN_CREATE_CLAIM_ID',0],
+        ['51','ttXCHAIN_COMMIT',0],
+        ['52','ttXCHAIN_CLAIM',0],
+        ['53','ttXCHAIN_ACCOUNT_CREATE_COMMIT',0],
+        ['54','ttXCHAIN_ADD_CLAIM_ATTESTATION',0],
+        ['55','ttXCHAIN_ADD_ACCOUNT_CREATE_ATTESTATION',0],
+        ['56','ttXCHAIN_MODIFY_BRIDGE',0],
+        ['57','ttXCHAIN_CREATE_BRIDGE',0],
+
+        //DID/Oracle/MPToken/Credential suite
+        ['58','ttDID_SET',0],
+        ['59','ttDID_DELETE',0],
+        ['60','ttORACLE_SET',0],
+        ['61','ttORACLE_DELETE',0],
+        ['62','ttLEDGER_STATE_FIX',0],
+        ['63','ttMPTOKEN_ISSUANCE_CREATE',0],
+        ['64','ttMPTOKEN_ISSUANCE_DESTROY',0],
+        ['65','ttMPTOKEN_ISSUANCE_SET',0],
+        ['66','ttMPTOKEN_AUTHORIZE',0],
+        ['67','ttCREDENTIAL_CREATE',0],
+        ['68','ttCREDENTIAL_ACCEPT',0],
+        ['69','ttCREDENTIAL_DELETE',0],
+        ['70','ttNFTOKEN_MODIFY',0],
+        ['71','ttPERMISSIONED_DOMAIN_SET',0],
+        ['72','ttPERMISSIONED_DOMAIN_DELETE',0],
+        
         ['92','ttCRON',0],
         ['93','ttCRON_SET',0],
         ['94','ttREMARKS_SET',0],
         ['95','ttREMIT',0],
         ['96','ttGENESIS_MINT',2], //Private
         ['97','ttIMPORT',2], //Private
-        ['98','ttCLAIM_REWARD',2], //Private
+        ['98','ttCLAIM_REWARD',0],
         ['99','ttINVOKE',0],
         ['100','ttAMENDMENT',2], //Private
         ['101','ttFEE',2], //Private
